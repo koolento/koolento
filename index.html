@@ -160,6 +160,32 @@
     ja ilmakuvaukset herättävät tarinat eloon.
   </p>
 
+<div class="relative overflow-hidden rounded-xl w-full max-w-sm mx-auto group">
+  <!-- Ambilight tausta -->
+  <div class="absolute inset-0 transform scale-110 blur-3xl opacity-40 pointer-events-none">
+    <iframe 
+      src="https://youtube.com/embed/zOBKZp62QXU?feature=share" 
+      frameborder="0" 
+      allow="autoplay; fullscreen; picture-in-picture" 
+      class="w-full h-full">
+    </iframe>
+  </div>
+
+  <!-- Varsinainen video (Shorts embed) -->
+  <div class="relative aspect-[9/16] w-full">
+    <iframe 
+      src="https://youtube.com/embed/zOBKZp62QXU?feature=share" 
+      frameborder="0" 
+      allow="autoplay; fullscreen; picture-in-picture" 
+      class="w-full h-full rounded-xl transition-transform duration-300 group-hover:scale-105"
+      loading="lazy"
+      allowfullscreen>
+    </iframe>
+  </div>
+</div>
+
+<!--
+
   <div class="grid md:grid-cols-2 gap-8">
     <div class="aspect-[9/16] bg-black rounded-2xl overflow-hidden shadow-lg">
       <iframe class="w-full h-full" src="https://youtube.com/embed/zOBKZp62QXU?feature=share" title="Drone video" frameborder="0" allowfullscreen></iframe>
@@ -168,6 +194,8 @@
       <iframe class="w-full h-full" src="https://youtube.com/embed/HQesIUn9-f0?feature=share" title="Drone video" frameborder="0" allowfullscreen></iframe>
     </div>
   </div>
+  -->
+  
 </section>
 
 
