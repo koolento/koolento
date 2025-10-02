@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html lang="fi">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Palvelut – Koolento FPV</title>
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+
+<style>
+
+    #mainNav {
+    font-family: "Pacifico", cursive;
+    transition: all 0.3s ease;
+    }
+
+/* Yksinkertainen fade animaatio */
+  @keyframes fadeIn {
+    from { opacity: 0; transform: scale(0.95); }
+    to { opacity: 1; transform: scale(1); }
+  }
+  .animate-fadeIn {
+    animation: fadeIn 0.3s ease-out;
+  }
+
+
+
+</style>
+
+
+<body class="bg-black text-white font-sans">
+
+<header id="mainNav" class="fixed top-0 left-0 w-full z-50 bg-black/80">
+  <div class="max-w-7xl mx-auto flex items-center justify-between px-4 py-3">
+    
+    <!-- Desktop menu vasemmalla -->
+    <button id="menuBtnDesktop" class="hidden md:block text-white text-2xl">
+      &#9776; <!-- hampurilaisikoni -->
+    </button>
+
+    <!-- Logo keskellä -->
+    <div class="flex-1 flex justify-center">
+    <a href="index.html" class="flex">
+      <img src="koolentologoparas.png" alt="Koolento Logo" class="h-8">
+      <svg id="miniLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40"
+     class="w-10 h-10 translate-x-5 transition-all duration-200 rotate-12">
+  <text x="0" y="30" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white">
+    FPV
+  </text>
+</svg>
+</a>
+    </div>
+
+    <!-- Mobile menu oikealla -->
+    <button id="menuBtnMobile" class="md:hidden text-white text-2xl">
+      &#9776;
+    </button>
+    
+  </div>
+
+  <!-- Navigaatiolista -->
+  <!-- Desktop menu -->
+  <div id="navMenuDesktop" class="hidden absolute left-6 top-full mt-2 rounded-xl bg-gray-900/95 shadow-lg px-6 py-4">
+    <ul class="flex flex-col gap-3 text-white text-lg">
+      <li><a href="portfolio_1.html" class="hover:text-blue-400">Portfolio</a></li>
+      <li><a href="palvelut1.html" class="hover:text-blue-400">Palvelut</a></li>
+      <li><a href="#social" class="hover:text-blue-400">Sosiaalinen media</a></li>
+      <li><a href="bio1.html" class="hover:text-blue-400">Bio & Yhteystiedot</a></li>
+    </ul>
+  </div>
+
+  <!-- Mobile menu -->
+  <div id="navMenuMobile" class="hidden absolute right-6 top-full mt-2 rounded-xl bg-gray-900/95 shadow-lg px-6 py-4">
+    <ul class="flex flex-col gap-3 text-white text-lg">
+      <li><a href="portfolio_1.html" class="hover:text-blue-400">Portfolio</a></li>
+      <li><a href="palvelut1.html" class="hover:text-blue-400">Palvelut</a></li>
+      <li><a href="#social" class="hover:text-blue-400">Sosiaalinen media</a></li>
+      <li><a href="bio1.html" class="hover:text-blue-400">Bio & Yhteystiedot</a></li>
+    </ul>
+  </div>
+</nav>
+
+</header>
+
+
+<!-- Palvelut content -->
+<section id="portfolio" class="relative py-20 px-6 md:px-20 text-center text-white">
+
+  <!-- Kontaineri tekstille -->
+  <div class="relative inline-block mx-auto w-full max-w-4xl mb-16">
+    
+    <!-- Video vain tekstin taustalla -->
+    <div class="relative inset-0 -z-10 w-full h-full overflow-hidden rounded-xl">
+      <video autoplay muted loop playsinline class="w-full h-full object-cover opacity-50">
+        <source src="portfolio-bg.mp4" type="video/mp4">
+      </video>
+      <div class="absolute inset-0 bg-black/40 rounded-xl"></div>
+    </div>
+
+
+    <!-- Portfolio otsikko -->
+    <h1 class="text-5xl md:text-6xl font-bold text-center mt-12 mb-40" style="font-family: 'Pacifico', cursive;">
+    Palvelut
+  </h1>
+
+    <!-- Lyhyt teksti -->
+    <p class="text-lg mb-12">
+      Tutustu aiempiin projekteihini – näissä näet, miten FPV-lennot ja ilmakuvaukset herättävät tarinat eloon.
+    </p>
+    
+  </div>
+  
+<!-- Services Section -->
+<section id="services" class="py-20 px-6 md:px-20 relative z-10">
+
+  <div class="grid md:grid-cols-1 gap-10">
+    <div onclick="openModal('service1')" 
+         class="relative group overflow-hidden rounded-2xl bg-blue-950 shadow-lg transform transition-transform duration-500 hover:scale-105 cursor-pointer">
+      <video autoplay muted loop playsinline 
+        class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+        <source src="4.mp4" type="video/mp4">
+      </video>
+      <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-700"></div>
+      <div class="relative p-6">
+        <h3 class="text-xl font-semibold mb-3">Ilmakuvaus</h3>
+        <p class="text-gray-300">Näyttävät ilmakuvat ja dynaamiset FPV-lennot, jotka vangitsevat maisemat uudesta perspektiivistä.</p>
+      </div>
+    </div>
+
+
+    <!-- Card 2 -->
+  <div class="grid md:grid-cols-1 gap-10">
+    <div onclick="openModal('service2')" 
+         class="relative group overflow-hidden rounded-2xl bg-blue-950 shadow-lg transform transition-transform duration-500 hover:scale-105 cursor-pointer">
+      <video autoplay muted loop playsinline 
+        class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+        <source src="5.mp4" type="video/mp4">
+      </video>
+      <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-700"></div>
+      <div class="relative p-6">
+        <h3 class="text-xl font-semibold mb-3">Kiinteistöt & Mainosvideot</h3>
+        <p class="text-gray-300">
+          Tyylikkäät ja erottuvat esittelyvideot kiinteistöihin ja markkinointiin – 
+          luovat ammattimaisen ensivaikutelman.
+        </p>
+      </div>
+    </div>
+
+    <!-- Card 3 -->
+  <div class="grid md:grid-cols-1 gap-10">
+    <div onclick="openModal('service3')" 
+         class="relative group overflow-hidden rounded-2xl bg-blue-950 shadow-lg transform transition-transform duration-500 hover:scale-105 cursor-pointer">
+      <video autoplay muted loop playsinline 
+        class="absolute inset-0 w-full h-full object-cover opacity-0 group-hover:opacity-100 transition-opacity duration-700">
+        <source src="3.mp4" type="video/mp4">
+      </video>
+      <div class="absolute inset-0 bg-black/60 group-hover:bg-black/40 transition-colors duration-700"></div>
+      <div class="relative p-6">
+        <h3 class="text-xl font-semibold mb-3">Showreelit & Sosiaalinen media</h3>
+        <p class="text-gray-300">
+          Nopeatempoiset ja visuaalisesti koukuttavat klipit someen, 
+          jotka herättävät huomiota ja lisäävät näkyvyyttä.
+        </p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- MODALS -->
+<div id="service1" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+  <div class="bg-gray-900 rounded-2xl max-w-2xl w-full p-8 relative shadow-2xl animate-fadeIn">
+    <!-- Close Button -->
+    <button onclick="closeModal('service1')" 
+            class="absolute top-4 right-4 text-gray-300 hover:text-white text-2xl">&times;</button>
+    
+    <h2 class="text-2xl font-bold mb-4 text-white">✈️ Ilmakuvaus</h2>
+    <p class="text-gray-300 leading-relaxed">
+      
+Näe maailma uudesta kulmasta!
+Ilmakuvauksella luomme vaikuttavia otoksia, jotka tekevät maisemista, tapahtumista ja kohteista ainutlaatuisia.
+Olipa kyse promootiosta, yritysvideosta tai muistojen tallentamisesta, ilmasta kuvattuna kokonaisuus saa aivan uuden ulottuvuuden – joka vangitsee katsojan katseen heti ensimmäisestä sekunnista.
+    </p>
+  </div>
+</div>
+
+<div id="service2" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+  <div class="bg-gray-900 rounded-2xl max-w-2xl w-full p-8 relative shadow-2xl animate-fadeIn">
+    <!-- Close Button -->
+    <button onclick="closeModal('service2')" 
+            class="absolute top-4 right-4 text-gray-300 hover:text-white text-2xl">&times;</button>
+    
+    <h2 class="text-2xl font-bold mb-4 text-white">🏡 Kiinteistöt & Mainosvideot</h2>
+    <p class="text-gray-300 leading-relaxed">
+ Anna kohteellesi arvoisensa esittely.
+Tyylikkäät ja erottuvat kiinteistövideot sekä mainosfilmit luovat heti ammattimaisen vaikutelman ja nostavat kiinnostusta.
+Kuvaamme tilat ja ympäristön luoden tarinan, joka houkuttelee ja vakuuttaa – täydellinen ratkaisu myyntiin, vuokraukseen tai brändin markkinointiin.
+    </p>
+  </div>
+</div>
+
+<div id="service3" class="hidden fixed inset-0 bg-black/80 flex items-center justify-center z-50">
+  <div class="bg-gray-900 rounded-2xl max-w-2xl w-full p-8 relative shadow-2xl animate-fadeIn">
+    <!-- Close Button -->
+    <button onclick="closeModal('service3')" 
+            class="absolute top-4 right-4 text-gray-300 hover:text-white text-2xl">&times;</button>
+    
+    <h2 class="text-2xl font-bold mb-4 text-white">🎬 Showreelit & Sosiaalinen media</h2>
+    <p class="text-gray-300 leading-relaxed">
+      
+Herätä huomiota – ja jää mieleen.
+Some vaatii nopeaa tempoa ja visuaalista koukuttavuutta, ja siksi suunnittelemme sisällöt juuri tähän tarkoitukseen.
+Dynaamiset showreelit ja someklipit tuovat brändisi esiin parhaalla mahdollisella tavalla: ne pysäyttävät scrollaajan ja lisäävät näkyvyyttäsi tehokkaasti.
+    </p>
+  </div>
+</div>
+
+<!-- Footer -->
+<footer class="py-6 text-center text-gray-500 text-sm bg-gray-950 relative z-10">
+  © 2025 Koolento FPV. Kaikki oikeudet pidätetään.
+</footer>
+
+<!-- JavaScript Navbar -->
+<script>
+
+document.addEventListener('DOMContentLoaded', () => {
+  const nav = document.getElementById("mainNav");
+  const menuDesktop = document.getElementById("menuBtnDesktop");
+  const menuMobile = document.getElementById("menuBtnMobile");
+  const navMenuDesktop = document.getElementById("navMenuDesktop");
+  const navMenuMobile = document.getElementById("navMenuMobile");
+
+
+// Toggle desktop menu
+menuDesktop.addEventListener("click", () => {
+  navMenuDesktop.classList.toggle("hidden");
+  navMenuMobile.classList.add("hidden"); // sulje mobiili jos auki
+});
+
+// Toggle mobile menu
+menuMobile.addEventListener("click", () => {
+  navMenuMobile.classList.toggle("hidden");
+  navMenuDesktop.classList.add("hidden"); // sulje desktop jos auki
+});
+
+// Sulje menu kun klikataan linkkiä
+document.querySelectorAll("#navMenuDesktop a, #navMenuMobile a").forEach(link => {
+  link.addEventListener("click", () => {
+    navMenuDesktop.classList.add("hidden");
+    navMenuMobile.classList.add("hidden");
+  });
+});
+
+// Modal -funktiot (globaalit, jotta inline onclick toimii)
+  window.openModal = function(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.classList.remove('hidden');
+    document.body.style.overflow = 'hidden';
+    modal.setAttribute('aria-hidden', 'false');
+  };
+  window.closeModal = function(id) {
+    const modal = document.getElementById(id);
+    if (!modal) return;
+    modal.classList.add('hidden');
+    document.body.style.overflow = '';
+    modal.setAttribute('aria-hidden', 'true');
+  };
+
+  // Sulje modal klikkaamalla backdropia
+  document.querySelectorAll('.modal').forEach(modal => {
+    modal.addEventListener('click', (e) => {
+      if (e.target === modal) {
+        modal.classList.add('hidden');
+        document.body.style.overflow = '';
+      }
+    });
+  });
+
+  // Sulje Esc-näppäimellä
+  document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape') {
+      document.querySelectorAll('.modal:not(.hidden)').forEach(m => m.classList.add('hidden'));
+      document.body.style.overflow = '';
+    }
+  });
+
+});
+
+  function openModal(id) {
+    document.getElementById(id).classList.remove("hidden");
+  }
+  function closeModal(id) {
+    document.getElementById(id).classList.add("hidden");
+  }
+
+</script>
+
+</body>
+</html>
