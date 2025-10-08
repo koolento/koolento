@@ -82,6 +82,7 @@
           filter: drop-shadow(0 0 15px rgba(0, 150, 255, 0.6))
                   drop-shadow(0 0 40px rgba(0, 150, 255, 0.3));
           transition: all 0.5s ease;
+          max-width: 40vw;
         }
 
         /* Hoverissa korostuu */
@@ -90,6 +91,14 @@
                   drop-shadow(0 0 60px rgba(0, 180, 255, 0.6));
           transform: scale(1.05);
         }
+
+        @media (max-width: 724px) {
+          #heroText {
+          font-size: 12px;
+          }
+
+        }
+      
     </style>
   </head>
 
@@ -142,17 +151,16 @@
       </nav>
 
       <!-- Hero Logo -->
-      <div id="logoWrapper" class="fixed inset-x-0 top-[15vh] z-20 flex items-center justify-center">
+      <div id="logoWrapper" class="fixed inset-x-0 top-[15vh] z-20 flex justify-center">
         <a href="index.html" class="pointer-events-auto flex items-center">
-          <img id="heroLogo" src="heroLogo.png" alt="Koolento FPV logo" class="w-60 transition-all duration-500 md:w-72" loading="eager" fetchpriority="high">
-
-          <!-- Pieni FPV-ikoni -->
+          <img id="heroLogo" src="heroLogo.png" alt="Koolento FPV logo" class="w-60 transition-all duration-500 md:w-60" loading="eager" fetchpriority="high">
           <svg id="miniLogo" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 40" class="h-10 w-10 translate-x-5 rotate-12 opacity-0 transition-all duration-200">
             <text x="0" y="30" font-family="Arial, sans-serif" font-size="30" font-weight="bold" fill="white">FPV</text>
           </svg>
         </a>
-        <p id="heroText" class="absolute top-full mt-4 text-lg text-gray-200 transition-opacity duration-500 md:text-2xl">FPV-drone ja ilmakuvaus</p>
+        <p id="heroText" class="absolute top-full mt-0 text-md text-gray-200 transition-opacity duration-500">FPV-drone ja ilmakuvaus</p>
       </div>
+      
     </section>
 
     <!-- Slogan + Button -->
