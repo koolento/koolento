@@ -29,6 +29,10 @@
 
     <style>
 
+          html {
+              scroll-behavior: smooth;
+          }
+
          .content {
               padding: 16px;
               padding-top: 60px;
@@ -110,13 +114,13 @@
           <!-- Hampurilaiset -->
           <div class="flex w-full items-center justify-between">
             <!-- Desktop hampurilainen (vasen) -->
-            <button id="menuBtnDesktop" aria-label="Avaa valikko" class="hidden text-2xl text-white md:block">☰</button>
+            <button id="menuBtnDesktop" title="Avaa valikko" aria-label="Avaa valikko" class="hidden text-2xl text-white md:block">☰</button>
 
             <!-- Tyhjä tila keskelle -->
             <div class="flex-grow"></div>
 
             <!-- Mobile hampurilainen (oikea) -->
-            <button id="menuBtnMobile" aria-label="Avaa valikko" class="block text-2xl text-white md:hidden">☰</button>
+            <button id="menuBtnMobile" title="Avaa valikko" aria-label="Avaa valikko" class="block text-2xl text-white md:hidden">☰</button>
           </div>
         </div>
 
@@ -255,7 +259,7 @@
         </div>
 
         <!-- Toggle button -->
-        <button id="toggleContactForm" class="inline-block rounded-2xl bg-blue-500 px-6 py-3 font-semibold text-black transition hover:bg-blue-400" aria-expanded="false" aria-controls="contactForm">Lähetä sähköpostia</button>
+        <button id="toggleContactForm" title="Ota yhteyttä" class="inline-block rounded-2xl bg-blue-500 px-6 py-3 font-semibold text-black transition hover:bg-blue-400" aria-expanded="false" aria-controls="contactForm">Lähetä sähköpostia</button>
 
         <!-- Contact form (hidden by default) -->
         <!-- tsekkaa input type buttoneille -->
